@@ -1,0 +1,38 @@
+{
+	"name": "opensaas",
+	"namespace": "Opensaas",
+	"desc": "Opensaas基本模块",
+	"type": "module",
+	"version": "1.0.0",
+	"routes": [
+		{
+			"route" : "regex",
+			"rule" : {
+				"regex": "/^\\/(admin)\\/(.*)/i",
+				"values": {
+					"controller": "$1",
+					"action": "$2"
+				}
+		    }
+		},
+		{
+			"route" : "pathinfo",
+			"rule": {
+			    "checkRegex" : "#^/(admin)#",
+				 "values": {}
+	    }
+		}
+	],
+	"autoloader": {
+		"namespaces": {
+			"Opensaas\\Model": "./models/",
+			"Opensaas\\Event": "./events/"
+		}
+	},
+	"config": true,
+	"lang": true,
+	"eventlistener": [
+	],
+	"require": {
+	}
+}

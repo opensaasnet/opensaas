@@ -1,0 +1,16 @@
+.buildpath
+.project
+*.log
+.git
+*/.pid
+*.txt
+.settings
+/vendor/
+.DS_Store
+*.phar
+runtime/view/*
+application/runtime/view/*
+public/setting
+public/profile
+public/tinyphp-ui
+composer.lock
